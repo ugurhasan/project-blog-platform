@@ -1,4 +1,4 @@
-## Installation instructions
+# Installation & Run instructions
 
 You need to install Node.js, Java 17+(Im using 17) and PostgreSQL. 
 
@@ -8,7 +8,7 @@ I will show you step-by-step how to install these to run app.
 - You can install Java JDK from https://www.oracle.com/java/technologies/javase-downloads.html
 - You can install PostgreSQL Database from https://www.postgresql.org/download/
 
-# ⚙️ PostgreSQL Setup 
+## ⚙️ PostgreSQL Setup 
 
 1. Download & install PostgreSQL from [https://www.postgresql.org/download](https://www.postgresql.org/download).
 2. Open **pgAdmin** or terminal and do the following:
@@ -25,3 +25,8 @@ spring.datasource.password=your_password
 ❗ **If PostgreSQL is not installed or configured properly, the Spring Boot backend will fail to start, usually with a "connection refused" or "database not found" error.**
 
 Install all these if you have not on your computer. 
+
+
+##  Run Instructions
+
+localhost:3000
