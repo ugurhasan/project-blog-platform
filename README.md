@@ -8,7 +8,7 @@ I will show you step-by-step how to install these to run app.
 - You can install Java JDK from https://www.oracle.com/java/technologies/javase-downloads.html
 - You can install PostgreSQL Database from https://www.postgresql.org/download/
 
-## ⚙️ PostgreSQL Setup 
+### ⚙️ PostgreSQL Setup 
 
 1. Download & install PostgreSQL from [https://www.postgresql.org/download](https://www.postgresql.org/download).
 2. Open **pgAdmin** or terminal and do the following:
@@ -29,4 +29,10 @@ Install all these if you have not on your computer.
 
 ##  Run Instructions
 
-localhost:3000
+- You need to direct to blog-platform-main and install node_modules(npm i or npm install). After that installation type "npm run dev" to run frontend.
+- You can run Backend using VSCode's GUI. You just need to open src/main/java\com\example\demo/user/DemoApplication.java and click Run button right top of VsCode.
+
+- Your frontend will be running on localhost:3000
+You need to open http://localhost:3000 to see website.
+
+
