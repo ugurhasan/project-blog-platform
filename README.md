@@ -8,7 +8,7 @@ I will show you step-by-step how to install these to run app.
 - You can install Java JDK from https://www.oracle.com/java/technologies/javase-downloads.html
 - You can install PostgreSQL Database from https://www.postgresql.org/download/
 
-## ⚙️ PostgreSQL Setup 
+# ⚙️ PostgreSQL Setup 
 
 1. Download & install PostgreSQL from [https://www.postgresql.org/download](https://www.postgresql.org/download).
 2. Open **pgAdmin** or terminal and do the following:
