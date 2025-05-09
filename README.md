@@ -1,6 +1,6 @@
 ## Installation instructions
 
-You need to install Node.js, Java 17+ and PostgreSQL. 
+You need to install Node.js, Java 17+(Im using 17) and PostgreSQL. 
 
 I will show you step-by-step how to install these to run app. 
 
