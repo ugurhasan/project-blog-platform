@@ -1,38 +1,107 @@
-# Installation & Run instructions
+# 🚀 Project Setup Instructions
 
-You need to install Node.js, Java 17+(Im using 17) and PostgreSQL. 
+You need to install **Node.js**, **Java JDK 17+**, and **PostgreSQL** to run this full-stack application.
 
-I will show you step-by-step how to install these to run app. 
+---
 
-- You can install Node.js from https://nodejs.org/en 
-- You can install Java JDK from https://www.oracle.com/java/technologies/javase-downloads.html
-- You can install PostgreSQL Database from https://www.postgresql.org/download/
+## 🔧 Prerequisites
 
-### ⚙️ PostgreSQL Setup 
+Install the following tools if you haven't already:
 
-1. Download & install PostgreSQL from [https://www.postgresql.org/download](https://www.postgresql.org/download).
+- [Node.js](https://nodejs.org/en)
+- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [PostgreSQL](https://www.postgresql.org/download/)
+
+---
+
+## ⚙️ Setting Up Environment Variables (Windows)
+
+To run the backend from terminal (e.g., using `mvnw.cmd`), Java must be properly configured:
+
+### Step 1: Find your JDK path
+
+Your JDK is usually installed in a directory like:
+
+```
+C:\Program Files\Java\jdk-17
+```
+
+Make sure it includes the `bin` folder (which has `javac.exe` and `java.exe`).
+
+### Step 2: Set JAVA_HOME and Update PATH
+
+1. Press `Win + S`, search for `Environment Variables`, and open it.
+2. Click `Environment Variables...`
+3. Under `System variables`, click `New`:
+   * Variable name: `JAVA_HOME`
+   * Variable value: `C:\Program Files\Java\jdk-17` (or your actual JDK path)
+4. Find the `Path` variable under System variables > click `Edit` > `New`:
+   * Add: `%JAVA_HOME%\bin`
+5. Click `OK` on all dialogs to save changes.
+6. Restart your terminal and test:
+
+```bash
+java -version
+javac -version
+```
+
+You should see the version printed correctly.
+
+---
+
+## 📊 PostgreSQL Setup
+
+1. Download & install PostgreSQL from [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
 2. Open **pgAdmin** or terminal and do the following:
    - Create a new database called `student`.
    - (Optional) Create a new user and password, or use the default `postgres` user.
-3. Update your `application.properties` file in `backend/src/main/resources/`:
+3. Update your `application.properties` file in `blog-platform-backend/src/main/resources/`:
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/student
 spring.datasource.username=postgres
-spring.datasource.password=your_password
+spring.datasource.password=your-password
 ```
 
-❗ **If PostgreSQL is not installed or configured properly, the Spring Boot backend will fail to start, usually with a "connection refused" or "database not found" error.**
+---
 
-Install all these if you have not on your computer. 
+## 🏃‍♂️ Running the Application
 
+### Backend
+1. Navigate to the backend directory:
+```bash
+cd blog-platform-backend
+```
 
-##  Run Instructions
+2. Run using Maven wrapper:
+```bash
+./mvnw spring-boot:run
+```
+(On Windows, use `mvnw.cmd` instead)
 
-- You need to direct to blog-platform-main and install node_modules(npm i or npm install). After that installation type "npm run dev" to run frontend.
-- You can run Backend using VSCode's GUI. You just need to open src/main/java\com\example\demo/user/DemoApplication.java and click Run button right top of VsCode.
+### Frontend
+1. Navigate to the frontend directory:
+```bash
+cd blog-platform-main
+```
 
-- Your frontend will be running on localhost:3000
-You need to open http://localhost:3000 to see website.
+2. Install dependencies:
+```bash
+npm install
+```
 
+3. Start development server:
+```bash
+npm start
+```
 
+4. Access the application at [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🔍 Troubleshooting
+
+If you encounter any issues with Java configuration:
+- Ensure JAVA_HOME points to the correct directory
+- Verify that %JAVA_HOME%\bin is in your PATH
+- Try restarting your computer after making environment variable changes
