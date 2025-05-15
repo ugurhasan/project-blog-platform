@@ -105,3 +105,4 @@ If you encounter any issues with Java configuration:
 - Ensure JAVA_HOME points to the correct directory
 - Verify that %JAVA_HOME%\bin is in your PATH
 - Try restarting your computer after making environment variable changes
+- Ask to ChatGPT
